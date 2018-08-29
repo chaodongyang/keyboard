@@ -91,7 +91,7 @@ class INPUT(ctypes.Structure):
 
 LowLevelKeyboardProc = CFUNCTYPE(c_int, WPARAM, LPARAM, POINTER(KBDLLHOOKSTRUCT))
 
-SetWindowsHookEx = user32.SetWindowsHookExW
+SetWindowsHookEx = user32.SetWindowsHookExA
 SetWindowsHookEx.argtypes = [c_int, LowLevelKeyboardProc, HINSTANCE , DWORD]
 SetWindowsHookEx.restype = HHOOK
 
